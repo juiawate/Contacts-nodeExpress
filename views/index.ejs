@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contacts</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/contactsData.js"></script>
+      <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+         .contact {
+             border: 1px solid black;
+             height: 10em;
+             width: 17em;
+             background-color: darkgrey;
+             margin: 1em;
+             padding: 1em;
+             display: none;
+             float: left;
+          }
+
+      </style>
+  </head>
+  <body>
+  <form action="/" method="post" name="contactsForm">
+      <h1>Contacts</h1>
+      <input type="text" name="username" placeholder="name"/>
+      <input type="text" name="email" placeholder="email"/>
+      <input type="submit" value="Create contact"/>
+  </form>
+  <br><br>
+  <form action="/" method="get" name="findContactsForm">
+      <input type="text" name="findEmail" placeholder="enter email"/>
+      <button id="getData">Find contact</button>
+  </form>
+  <form action="/" name="editContacts">
+      <div id="showContacts">
+        <div class="contact">
+            Name: <input type="text" name="name"/><br>
+            Email: <input type="text" name="userEmail" disabled/><br><br>
+            <button name="Save">Update</button>
+            <button name="Delete">Delete</button>
+        </div>
+      </div>
+  </form>
+  </body>
+</html>
